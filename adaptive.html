@@ -1,0 +1,32 @@
+<script>
+//IN data
+
+     const BREAK_POINT_EXTRA_LARGE = 1920
+     const BREAK_POINT_LARGE = 1200
+     const BREAK_POINT_MEDIUM = 980
+     const BREAK_POINT_SMALL = 560
+
+// ----------------x --------------------window size
+//       mobile    1100          desktop
+//  + size < 60 -error
+//  +size  > 3000 - error
+
+     let windowWidth   = innerWidth   //innerWidth  
+
+//DECISION /adaptive
+
+     if(windowWidth >= BREAK_POINT_EXTRA_LARGE){
+          alert( "Window size: Extra Large" )
+     } else if( windowWidth >= BREAK_POINT_LARGE && windowWidth <= BREAK_POINT_EXTRA_LARGE){
+          alert( " Window size:  Large " )
+     } else if ( windowWidth >= BREAK_POINT_MEDIUM && windowWidth <= BREAK_POINT_LARGE){
+          alert("Window size: Medium ")
+     } else if( windowWidth >= BREAK_POINT_SMALL && windowWidth <= BREAK_POINT_MEDIUM) {
+          alert(" Window size: Small ")
+     } else if( windowWidth <= BREAK_POINT_SMALL){
+          alert(" Window size -  Extra small! ")
+     } else {
+          alert(" WRONG SIZE! :( ")
+     }
+
+   </script>
